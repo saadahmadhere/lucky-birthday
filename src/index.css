@@ -11,3 +11,53 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body{
+  max-width: 600px;
+  width: 100%;
+  margin:auto;
+}
+
+:root{
+  --primary-color: rgba(255, 251, 0, 0.788);
+  --secondary-color: #8E8358;
+}
+
+.App{
+  text-align: center;
+}
+
+/* top section */
+
+.top-section{
+  background-image: url(./bg.svg);
+  min-height: 100vh;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pageTitle{
+  background-color: var(--primary-color);
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  box-shadow: 0px 0px 10px 5px var(--secondary-color);
+}
+
+.pageTitle a{
+  display: block;
+  color: black;
+  padding: 0.5rem;
+  margin: 1rem
+}
+
+/* bottom section */
+
+.bottom-section{
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 10px 5px var(--secondary-color);
+}
