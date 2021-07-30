@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 600px;
+  width: 100%;
+  margin:auto;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 code {
@@ -12,11 +19,6 @@ code {
     monospace;
 }
 
-body{
-  max-width: 600px;
-  width: 100%;
-  margin:auto;
-}
 
 :root{
   --primary-color: rgba(255, 251, 0, 0.788);
@@ -31,7 +33,7 @@ body{
 
 /* top section */
 
-.top-section{
+#topSection{
   background-image: url(./bg.svg);
   min-height: 100vh;
   background-attachment:fixed;
@@ -60,14 +62,15 @@ body{
 
 /* bottom section */
 
-.bottom-section{
+#mainSection{
   background-color: var(--primary-color);
   box-shadow: 0px 0px 10px 5px var(--secondary-color);
   padding: 1rem;
   text-align: center;
+  min-height: 100vh;
 }
 
-.bottom-section h1{
+#mainSection h1{
   margin: 0 auto 0;
 }
 
@@ -97,8 +100,59 @@ color: #fff
 }
 
 button:hover{
-background-color: var(--primary-color);
+background-color: transparent;
 border: 1px solid var(--secondary-color);
 cursor: pointer;
 color: black;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.alert {
+  margin-bottom: 1rem;
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  box-shadow: 0px 0px 10px 5px var(--secondary-color);
+}
+
+/*Footer*/
+
+
+.footerLink a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+footer {
+  box-shadow: 0px 0px 10px 2px var(--secondary-color);
+  padding: 0 0 1rem;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.legacyText {
+  font-size: 0.8rem;
 }
