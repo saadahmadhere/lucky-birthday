@@ -9,13 +9,15 @@ function App() {
   
   const [date, setDate] = useState('');
   const [num, setNum] = useState(0);
-  const [islucky, setIsLucky] = useState(false);
+  const [isLucky, setIsLucky] = useState(false);
   const [checkButtonPressed, setCheckButtonPressed] = useState(false);
   const [crossClicked, setCrossClicked] = useState("");
 
   const handleClick = (e) =>{
 
     e.preventDefault();
+    setCheckButtonPressed(true);
+
     const dateArray = date.split("-");
    
     dateArray.map(item => {
@@ -25,19 +27,23 @@ function App() {
       
       if(sum % Number(num) === 0){
         setIsLucky(true)
+      }else{
+        setIsLucky(false)
       }
   
       return 0;
     })
-    setCheckButtonPressed(true)
+   
   }
 
   const dateHandler = (e) =>{
     setDate(e.target.value)
+    setCheckButtonPressed(false)
   }
 
   const numHandler = (e) =>{
     setNum(e.target.value)
+    setCheckButtonPressed(false)
   }
 
   const crossHandler = () =>{
@@ -69,7 +75,7 @@ function App() {
                  <label htmlFor="luckyNum">Enter your lucky number </label>
                  <input type="number" id="luckyNum" onChange={numHandler} required/>
                  <button type="submit">Check</button>
-                 {checkButtonPressed ? islucky 
+                 {checkButtonPressed ? isLucky 
                                        ?<Lucky/>
                                        :<UnLucky/>
                                      :null}

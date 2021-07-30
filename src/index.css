@@ -80,13 +80,14 @@ form{
 
 input{
   display: block;
-  margin: 1rem auto 1.5rem;
+  margin:auto auto 1.5rem;
   padding: 0.5rem;
   width: 40%;
 }
 
 label{
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 button{

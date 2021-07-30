@@ -3,7 +3,7 @@ import happy from './happy.svg'
 const Lucky = () => {
     return ( 
         <div className="outcome">
-            <p>You're lucky</p>
+            <h3>You are a lucky person</h3>
             <img src={happy} alt="happy" width="100%" height = "200px" />
         </div>
      );
